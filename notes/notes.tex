@@ -6,16 +6,17 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
-\title{NetBot: A Hockey Driven intgelligent agent}
+\title{NetBot: A Football Driven intgelligent agent}
 \date{\today}
 \begin{document}
 \maketitle
 \section{Introduction}
-We introduce an intelligent agent capable of imitating the skillset of an human expert in the sport of ice hockey, particularly the goaltender. 
+We introduce an intelligent agent capable of imitating the skill set of an human expert in the sport of football, particularly the goalkeeper. 
 \\ \\
 
-Having an autonomous agent capable of imitating a human expert in the game of ice hockey, or footabll (soccer), is a challenging task. A wide range of possible solutions exist, one of the main ones is using a CNN that takes images from the keepers POV to determine the action that the keeper should take. E.g., given a frame in a video sequence, the CNN $C(x)$ has a possible output $x'$ such that $x' \in O$ where $O$ is a set of possible actions, i.e. {Top Left, Top Right, Bottom Right, Bottom Left, Dive Right, Dive Left, Jump, Stand}. This is a possible approach. The ultimate endgoal is to not utilize sensors for estiamte where a keeper should move as it produces unrealistic movements like that of a human expert. Rather, we are trying to develop agent with human expert thinking capabilities in which its decision choice falls in the same range as the human expert.
+Having an autonomous agent capable of imitating a human expert in the game of footabll (soccer), is a challenging task. A wide range of possible solutions exist, one of the main ones is using a CNN that takes images from the keepers POV to determine the action that the keeper should take. E.g., given a frame in a video sequence, the CNN $C(x)$ has a possible output $x'$ such that $x' \in O$ where $O$ is a set of possible actions, i.e. {Top Left, Top Right, Bottom Right, Bottom Left, Dive Right, Dive Left, Jump, Stand}. This is a possible approach. The ultimate end-goal is to not utilize sensors to estimate where a keeper should move as it produces unrealistic movements like that of a human expert. Rather, we are trying to develop agent with human expert thinking capabilities in which its decision choice falls in the same range as the human expert. Hello
 
 \section{Data Collection}
+In order to gather training data for later processing, we employ a method of live-streaming from a mobile device affixed to the goalkeeper during a game, which is then broadcast on YouTube. Subsequently, the data is extracted via the use of YouTube's API. We take this approach with the intention of training future devices and storing training data on the cloud rather than locally like on an SD card. 
 \end{document}
 
