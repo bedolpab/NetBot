@@ -3,6 +3,7 @@ let apiKey = "";
 let livestreamInstance;
 let intervalID;
 let frameLabel;
+let interval = 0;
 
 const form = document.querySelector(".search form");
 const input = document.querySelector(".search input");
@@ -51,6 +52,21 @@ label.addEventListener("keydown", (e) => {
     frameLabel = label.value;
     label.value = "";
   }
+});
+
+save.addEventListener("click", () => {
+  interval += 1;
+  let filename = "training_data_" + interval.toString() + ".txt";
+  let blob = document.createElement("a");
+  blob.setAttribute(
+    "href",
+    "data:text/plain;charset=utf-8," + encodeURIComponent(training.value)
+  );
+  blob.setAttribute("download", filename);
+  blob.style.display = "none";
+  document.body.appendChild(blob);
+  blob.click();
+  document.body.removeChild(blob);
 });
 
 function showData() {
